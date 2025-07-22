@@ -1,0 +1,6 @@
+<h1>Your Profile</h1>
+<p>Unique ID: {{ profile.unique_id }}</p>
+{% if profile.identity_card %}
+    <p>Identity Card: <a href="{{ profile.identity_card.url }}">View</a></p>
+{% endif %}
+<a href="{% url 'update_profile' %}">Update Profile</a>
